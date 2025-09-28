@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>
-            <img src="guide.png" alt="city image" width="50px">
+            <img src="images/guide.png" alt="city image" width="50px">
             Welcome to the city guide GALLERY PAGE
         </h1>
 
@@ -26,12 +26,12 @@
             <h3>Click flags for tourist attraction images</h3>
             <table>
                 <tr>
-                    <td><img src="france.png" alt="france flag" width="100px" hspace="30" onclick="showGallery('paris')"><br>Paris</td>
-                    <td><img src="uk.png" alt="uk flag" width="100px" hspace="30" onclick="showGallery('london')"><br>London</td>
-                    <td><img src="italy.png" alt="italy flag" width="100px" hspace="30" onclick="showGallery('rome')"><br>Rome</td>
-                    <td><img src="czech.png" alt="czech flag" width="100px" hspace="30" onclick="showGallery('prague')"><br>Prague</td>
-                    <td><img src="spain.png" alt="spain flag" width="100px" hspace="30" onclick="showGallery('barcelona')"><br>Barcelona</td>
-                    <td><img src="korea.png" alt="korea flag" width="100px" hspace="30" onclick="showGallery('seoul')"><br>Seoul</td>
+                    <td><img src="images/france.png" alt="france flag" width="100px" hspace="30" onclick="showGallery('paris')"><br>Paris</td>
+                    <td><img src="images/uk.png" alt="uk flag" width="100px" hspace="30" onclick="showGallery('london')"><br>London</td>
+                    <td><img src="images/italy.png" alt="italy flag" width="100px" hspace="30" onclick="showGallery('rome')"><br>Rome</td>
+                    <td><img src="images/czech.png" alt="czech flag" width="100px" hspace="30" onclick="showGallery('prague')"><br>Prague</td>
+                    <td><img src="images/spain.png" alt="spain flag" width="100px" hspace="30" onclick="showGallery('barcelona')"><br>Barcelona</td>
+                    <td><img src="images/korea.png" alt="korea flag" width="100px" hspace="30" onclick="showGallery('seoul')"><br>Seoul</td>
                 </tr>
             </table>
         </div>
@@ -41,12 +41,12 @@
         <script>
             function showGallery(city) {
                 var images = {
-                    paris: ["paris1.png", "paris2.png", "paris3.png"],
-                    london: ["london1.png", "london2.png", "london3.png"],
-                    rome: ["rome1.png", "rome2.png", "rome3.png"],
-                    prague: ["prague1.png", "prague2.png", "prague3.png"],
-                    barcelona: ["barcelona1.png", "barcelona2.png", "barcelona3.png"],
-                    seoul: ["seoul1.png", "seoul2.png", "seoul3.png"]
+                    paris: ["images/paris1.png", "images/paris2.png", "images/paris3.png"],
+                    london: ["images/london1.png", "images/london2.png", "images/london3.png"],
+                    rome: ["images/rome1.png", "images/rome2.png", "images/rome3.png"],
+                    prague: ["images/prague1.png", "images/prague2.png", "images/prague3.png"],
+                    barcelona: ["images/barcelona1.png", "images/barcelona2.png", "images/barcelona3.png"],
+                    seoul: ["images/seoul1.png", "images/seoul2.png", "images/seoul3.png"]
                 };
 
                 var galleryDiv = document.getElementById("gallery");
