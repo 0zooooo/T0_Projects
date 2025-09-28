@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>Homepage</title>
+        <title>Schedule - City Guide</title>
     </head>
     <body>
         <h1>
-            <img src="images/guide.png" alt="city image" width="50px">
+            <img src="images/guide.png" alt="city image" width="50" />
             Welcome to the city guide SCHEDULE PAGE
         </h1>
 
@@ -21,327 +21,250 @@
 
         <hr>
 
-        <div class = "countries">
+        <section class="countries">
             <h2>Countries</h2>
             <h3>Select cities for images</h3>
             <table>
-                <tr>
-                    <td><a href="#paris" target="_blank"><img src="images/france.png" alt="france flag" width="100px" hspace="30"></a><br>Paris</td>
-                    <td><a href="#london" target="_blank"><img src="images/uk.png" alt="uk flag" width="100px" hspace="30"></a><br>London</td>
-                    <td><a href="#rome" target="_blank"><img src="images/italy.png" alt="italy flag" width="100px" hspace="30"></a><br>Rome</td>
-                    <td><a href="#prague" target="_blank"><img src="images/czech.png" alt="czech flag" width="100px" hspace="30"></a><br>Prague</td>
-                    <td><a href="#barcelona" target="_blank"><img src="images/spain.png" alt="spain flag" width="100px" hspace="30"></a><br>Barcelona</td>
-                    <td><a href="#seoul" target="_blank"><img src="images/korea.png" alt="korea flag" width="100px" hspace="30"></a><br>Seoul</td>
-                </tr>
+                <caption>Quick city links</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Paris</th>
+                        <th scope="col">London</th>
+                        <th scope="col">Rome</th>
+                        <th scope="col">Prague</th>
+                        <th scope="col">Barcelona</th>
+                        <th scope="col">Seoul</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#paris" target="_blank"><img src="images/france.png" alt="france flag" width="100" hspace="30"></a><br>Paris</td>
+                        <td><a href="#london" target="_blank"><img src="images/uk.png" alt="uk flag" width="100" hspace="30"></a><br>London</td>
+                        <td><a href="#rome" target="_blank"><img src="images/italy.png" alt="italy flag" width="100" hspace="30"></a><br>Rome</td>
+                        <td><a href="#prague" target="_blank"><img src="images/czech.png" alt="czech flag" width="100" hspace="30"></a><br>Prague</td>
+                        <td><a href="#barcelona" target="_blank"><img src="images/spain.png" alt="spain flag" width="100" hspace="30"></a><br>Barcelona</td>
+                        <td><a href="#seoul" target="_blank"><img src="images/korea.png" alt="korea flag" width="100" hspace="30"></a><br>Seoul</td>
+                    </tr>
+                </tbody>
             </table>
-        </div>
+        </section>
 
-<!-- PARIS -->
-
+        <!-- PARIS -->
         <hr>
         <h2 id="paris">Paris</h2>
         <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임<br>
-                    Café Verlet (256 Rue Saint-Honoré) — 분위기 좋은 카페 & 브런치 메뉴 가능
-                </td>
-            </tr>
-            <tr>
-                <td>09:30</td>
-                <td>루브르 박물관 입장 / 관람 시작<br>
-                    Louvre Museum 공식 사이트 참조 (내부 카페/음식 옵션도 있음) 
-                </td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td>
-                    점심식사<br>
-                    Le Café Marly — 루브르 바로 옆 레스토랑<br>
-                    Brasserie du Louvre — 정통 프랑스 요리 브라세리 스타일
-                </td>
-            </tr>
-            <tr>
-                <td>13:30</td>
-                <td>루브르 부속 전시장 / 조각 · 회화 감상</td>
-            </tr>
-            <tr>
-                <td>15:30</td>
-                <td>튀일리 정원 산책 → 개선문/샹젤리제 쪽 이동</td>
-            </tr>
-            <tr>
-                <td>17:30</td>
-                <td>에펠탑으로 이동   (에펠탑 전망대 사전 예약)</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사 : 개선문 근처 또는 에펠탑 주변 식당</td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>에펠탑 야경 관람 & 라이트 쇼 (밤 10시경 라이트 쇼)</td>
-            </tr>
-            <tr>
-                <td>21:30</td>
-                <td>바 또는 루프탑 바 방문 파리 중심 루프탑 바 중 하나에서 야경 구경</td>
-            </tr>
+            <caption>Paris - 1 Day Suggested Schedule</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Notes / Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:30</td>
+                    <td>아침 &amp; 카페 타임</td>
+                    <td>Café Verlet (256 Rue Saint-Honoré) — 분위기 좋은 카페 &amp; 브런치 메뉴 가능</td>
+                </tr>
+                <tr>
+                    <td>09:30</td>
+                    <td>루브르 박물관 입장 / 관람 시작</td>
+                    <td>Louvre Museum 공식 사이트 참조 (내부 카페/음식 옵션도 있음)</td>
+                </tr>
+                <!-- full-width note row (colspan=3) -->
+                <tr>
+                    <td colspan="3"> 루브르 박물관은 면적이 넓으니 주요 전시를 미리 체크하세요. 표 구입 및 큐레이션 권장.</td>
+                </tr>
+                <tr>
+                    <td>12:00</td>
+                    <td>점심식사</td>
+                    <td>Le Café Marly / Brasserie du Louvre</td>
+                </tr>
+                <!-- colspan=2 + independent cell example -->
+                <tr>
+                    <td colspan="2">자유 시간: 루브르 부속 전시장 / 조각 · 회화 감상</td>
+                    <td>약 2시간 권장</td>
+                </tr>
+                <tr>
+                    <td>15:30</td>
+                    <td>튀일리 정원 산책 → 개선문/샹젤리제 쪽 이동</td>
+                    <td>도보 이동</td>
+                </tr>
+                <tr>
+                    <td>17:30</td>
+                    <td>에펠탑으로 이동</td>
+                    <td>에펠탑 전망대 사전 예약 권장</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" bgcolor="#fff3cd">Tip: 파리 내 이동은 메트로/도보가 편리합니다. 일정은 여유롭게 잡으세요.</td>
+                </tr>
+            </tfoot>
         </table>
 
-<!-- LONDON -->
-
+        <!-- LONDON -->
         <hr>
         <h2 id="london">London</h2>
         <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임<br>
-                    Dominique Ansel Bakery London 등 베이커리 카페로 가벼운 아침 식사
-                </td>
-            </tr>
-            <tr>
-                <td>09:30</td>
-                <td>버킹엄 궁전 & 근위병 교대식</td>
-            </tr>
-            <tr>
-                <td>10:30</td>
-                <td>웨스트민스터 사원 + 빅벤 + 국회의사당 구경</td>
-            </tr>
-            <tr>
-                <td>12:30</td>
-                <td>
-                    점심식사<br>
-                    Dishoom (Covent Garden or Shoreditch 지점)<br>
-                    Padella (파스타)
-                </td>
-            </tr>
-            <tr>
-                <td>14:00</td>
-                <td>템즈강 유람선 + 런던아이 탑승</td>
-            </tr>
-            <tr>
-                <td>15:30</td>
-                <td>세인트 폴 대성당 / 밀레니엄 브리지 산책</td>
-            </tr>
-            <tr>
-                <td>17:00</td>
-                <td>타워브리지 & 런던 타워 구경</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>
-                    저녁식사<br>
-                    Core by Clare Smyth (미슐랭 스타 레스토랑)<br>
-                    Andrew Montgomery 고급 레스토랑<br>
-                    Condé Nast Traveler
-                </td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>웨스트엔드 뮤지컬 관람 / 야경 산책</td>
-            </tr>
-            <tr>
-                <td>22:30</td>
-                <td>근처 디저트 가게</td>
-            </tr>
+            <caption>London - 1 Day Suggested Schedule</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Notes / Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:30</td>
+                    <td>아침 &amp; 카페 타임</td>
+                    <td>Dominique Ansel Bakery London 등</td>
+                </tr>
+                <tr>
+                    <td>09:30</td>
+                    <td>버킹엄 궁전 &amp; 근위병 교대식</td>
+                    <td>시간 확인 필요</td>
+                </tr>
+                <tr>
+                    <td>10:30</td>
+                    <td>웨스트민스터 사원 + 빅벤 + 국회의사당 구경</td>
+                    <td>근접 구경 코스</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" bgcolor="#fff3cd">Tip: 런던은 도로 공사나 행사로 일정이 변경될 수 있으니 여유 있게 계획하세요.</td>
+                </tr>
+            </tfoot>
         </table>
 
-<!-- ROME -->
-
+        <!-- ROME -->
         <hr>
         <h2 id="rome">Rome</h2>
         <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임</td>
-            </tr>
-            <tr>
-                <td>09:00</td>
-                <td>콜로세움 & 로마 포럼 투어</td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td>
-                    점심식사<br>
-                    La Taverna dei Fori Imperiali — 포로 로마노 근처 분위기 좋은 전통 로마 요리 맛집<br>
-                    Armando al Pantheon (판테온 근처) — 클래식한 로마 음식점 추천 리스트에도 자주 등장함
-                </td>
-            </tr>
-            <tr>
-                <td>13:30</td>
-                <td>판테온 / 나보나 광장 / 판테온 주변 산책</td>
-            </tr>
-            <tr>
-                <td>15:00</td>
-                <td>바티칸 시국 (성 베드로 대성당 / 시스티나 성당)</td>
-            </tr>
-            <tr>
-                <td>17:30</td>
-                <td>트라스테베레 지역으로 이동 & 구경</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사<br>
-                    Osteria da Zi’ Umberto 트라스테베레 지역의 골목 안 위치<br>
-                    Taverna Trilussa 전통식당
-                </td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>트레비 분수 야경 / 스페인 계단 산책</td>
-            </tr>
-            <tr>
-                <td>21:30</td>
-                <td>젤라또 / 디저트 카페 (로마 중심가 골목길 젤라또 가게 탐방)</td>
-            </tr>
+            <caption>Rome - 1 Day Suggested Schedule</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Notes / Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:30</td>
+                    <td>아침 &amp; 카페 타임</td>
+                    <td>현지 바리스타 추천 카페</td>
+                </tr>
+                <tr>
+                    <td>09:00</td>
+                    <td>콜로세움 &amp; 로마 포럼 투어</td>
+                    <td>투어 예약 권장</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" bgcolor="#fff3cd">Tip: 로마는 골목이 많아 걷기 좋습니다. 편한 신발을 준비하세요.</td>
+                </tr>
+            </tfoot>
         </table>
 
-<!-- PRAGUE -->
-
+        <!-- PRAGUE -->
         <hr>
         <h2 id="prague">Prague</h2>
         <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임<br>
-                    프라하 올드타운 쪽 카페 산책
-                </td>
-            </tr>
-            <tr>
-                <td>09:30</td>
-                <td>프라하 성 & 성 비투스 대성당 방문</td>
-            </tr>
-            <tr>
-                <td>11:30</td>
-                <td>
-                    점심식사<br>
-                    올드타운 근처 전통 체코 음식점 (굴라시, 스비치코바 등)
-                </td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td>카를교 산책 → 구시가지 천문시계탑</td>
-            </tr>
-            <tr>
-                <td>15:00</td>
-                <td>유대인 지구 (Josefov) 탐방 / 골목길 산책</td>
-            </tr>
-            <tr>
-                <td>17:00</td>
-                <td>망토다리 건너 강변 산책</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사<br>
-                    Kampa Park (강변 분위기 좋은 레스토랑), 또는 Mlýnec 같은 모던하면서도 전통 메뉴를 잘 살린 레스토랑
-                </td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>프라하 성 야경 / 강변 야경 감상</td>
-            </tr>
-            <tr>
-                <td>21:30</td>
-                <td>디저트 혹은 맥주 (체코는 맥주로 유명 -> 로컬 펍 또는 브루어리 방문해도 좋음)
-                </td>
-            </tr>
+            <caption>Prague - 1 Day Suggested Schedule</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Notes / Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:30</td>
+                    <td>아침 &amp; 카페 타임</td>
+                    <td>올드타운 카페 추천</td>
+                </tr>
+                <tr>
+                    <td>09:30</td>
+                    <td>프라하 성 &amp; 성 비투스 대성당 방문</td>
+                    <td>입장 시간 확인</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" bgcolor="#fff3cd">Tip: 프라하는 겨울에 추울 수 있으니 계절에 맞는 옷차림을 권장합니다.</td>
+                </tr>
+            </tfoot>
         </table>
 
-<!-- BARCELONA -->
-
+        <!-- BARCELONA -->
         <hr>
         <h2 id="barcelona">Barcelona</h2>
         <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임
-                </td>
-            </tr>
-            <tr>
-                <td>09:30</td>
-                <td>사그라다 파밀리아 성당 관람 
-                </td>
-            </tr>
-            <tr>
-                <td>11:00</td>
-                <td>
-                    점심식사<br>
-                    고딕 지구 근처 식당 이용 / 카탈루냐식 레스토랑
-                </td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td>고딕 지구 산책 / 보케리아 시장 탐방   (La Boqueria 시장) — 스탠드 음식 즐기기</td>
-            </tr>
-            <tr>
-                <td>14:30</td>
-                <td>구엘 공원 산책 → 가우디 건축 탐방 (카사 바트요, 카사 밀라 등)</td>
-            </tr>
-            <tr>
-                <td>17:30</td>
-                <td>몬주익 언덕 / 미로 공원 산책 및 전망 감상</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사<br>
-                    해산물 파에야 / 타파스 중심 레스토랑 선택
-                </td>
-            </tr>
-            <tr>
-                <td>20:30</td>
-                <td>몬주익 분수 쇼 / 야경 산책</td>
-            </tr>
-            <tr>
-                <td>21:30</td>
-                <td>디저트 / 바 거리 산책 ㅡ 고딕지구 / 엘 보른 (El Born) 쪽 바 & 디저트 숍 다수 존재</td>
-            </tr>
+            <caption>Barcelona - 1 Day Suggested Schedule</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Notes / Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:30</td>
+                    <td>아침 &amp; 카페 타임</td>
+                    <td>현지 카페</td>
+                </tr>
+                <tr>
+                    <td>09:30</td>
+                    <td>사그라다 파밀리아 성당 관람</td>
+                    <td>티켓 사전 구매 권장</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" bgcolor="#fff3cd">Tip: 보케리아 시장은 피크 타임에 붐빕니다. 아침 일찍 방문 추천.</td>
+                </tr>
+            </tfoot>
         </table>
 
-<!-- SEOUL -->
-
+        <!-- SEOUL -->
         <hr>
         <h2 id="seoul">Seoul</h2>
         <table border="1" cellpadding="10">
-            <tr>
-                <td>10:00</td>
-                <td>남산타워 (N서울타워) → 케이블카 또는 버스로 이동<br>
-                    남산타워 전망대 & 서울 전경 감상
-                </td>
-            </tr>
-            <tr>
-                <td>11:30</td>
-                <td>이태원 이동 ㅡ 경리단길 
-                </td>
-            </tr>
-            <tr>
-                <td>12:30</td>
-                <td>
-                    점심식사<br>
-                    Maple Tree House (한식 바베큐 / 스테이크 스타일)
-                </td>
-            </tr>
-            <tr>
-                <td>14:00</td>
-                <td>이태원 거리 탐방</td>
-            </tr>
-            <tr>
-                <td>15:30</td>
-                <td>카페 (이태원 근처) / 디저트</td>
-            </tr>
-            <tr>
-                <td>17:30</td>
-                <td>해방촌  주변 가볍게 둘러보기</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사<br>
-                Low & Slow (이태원 우수 스테이크/바비큐)<br>
-                Anssi Makgeolli (안씨막걸리) — 전통주 + 한식 안주 스타일
-            </td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>이태원 저녁 거리 즐기기</td>
-            </tr>
+            <caption>Seoul - 1 Day Suggested Schedule</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Notes / Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10:00</td>
+                    <td>남산타워 (N서울타워)</td>
+                    <td>케이블카 또는 버스 이용</td>
+                </tr>
+                <tr>
+                    <td>11:30</td>
+                    <td>이태원 이동 — 경리단길</td>
+                    <td>쇼핑/카페 탐방</td>
+                </tr>
+                <tr>
+                    <td colspan="3"> 서울은 교통체증이 있을 수 있으니 이동 시간을 넉넉히 잡으세요.</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" bgcolor="#fff3cd">Tip: 외국인 관광객은 T-money 카드를 이용하면 교통이 편리합니다.</td>
+                </tr>
+            </tfoot>
         </table>
 
     </body>
