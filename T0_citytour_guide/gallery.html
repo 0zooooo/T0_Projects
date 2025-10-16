@@ -2,63 +2,82 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Homepage</title>
+        <link rel = "stylesheet" href = "style_gallery.css">
     </head>
     <body>
-        <h1>
-            <img src="images/guide.png" alt="city image" width="50px">
-            Welcome to the city guide GALLERY PAGE
-        </h1>
+        <header>
+            <div class="logo" onclick="location.href='index.html'">투어 이름</div>
+            <div class="header-right">
+            <div class="search-box">
+            <input type="text" placeholder="검색...">
+            </div>
+            <button class="home-btn" onclick="location.href='index.html'">HOME</button>
+            </div>
+        </header>
 
         <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">INFO</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="schedule.html">SCHEDULE</a></li>
-            </ul>
+            <a href="about.html">INFO</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="schedule.html">SCHEDULE</a>
         </nav>
 
-        <hr>
+        <section class="banner">
+            <div>여행의 순간을 함께합니다 ✈️</div>
+        </section>
 
-        <div class = "countries">
-            <h2>Countries</h2>
-            <h3>Click flags for tourist attraction images</h3>
-            <table>
-                <tr>
-                    <td><img src="images/france.png" alt="france flag" width="100px" hspace="30" onclick="showGallery('paris')"><br>Paris</td>
-                    <td><img src="images/uk.png" alt="uk flag" width="100px" hspace="30" onclick="showGallery('london')"><br>London</td>
-                    <td><img src="images/italy.png" alt="italy flag" width="100px" hspace="30" onclick="showGallery('rome')"><br>Rome</td>
-                    <td><img src="images/czech.png" alt="czech flag" width="100px" hspace="30" onclick="showGallery('prague')"><br>Prague</td>
-                    <td><img src="images/spain.png" alt="spain flag" width="100px" hspace="30" onclick="showGallery('barcelona')"><br>Barcelona</td>
-                    <td><img src="images/korea.png" alt="korea flag" width="100px" hspace="30" onclick="showGallery('seoul')"><br>Seoul</td>
-                </tr>
-            </table>
+        <h2>나라를 선택하세요</h2>
+        <div class="flag-row">
+            <img src="images/france.png" alt="France" onclick="showGallery('france')">
+            <img src="images/uk.png" alt="UK" onclick="showGallery('uk')">
+            <img src="images/italy.png" alt="Italy" onclick="showGallery('italy')">
+            <img src="images/czech.png" alt="Czech" onclick="showGallery('czech')">
+            <img src="images/spain.png" alt="Spain" onclick="showGallery('spain')">
+            <img src="images/korea.png" alt="Korea" onclick="showGallery('korea')">
         </div>
 
-        <div id="gallery"></div>
+        <div id="gallery-box">
+            <button class="slide-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+            <img id="current-image" src="" alt="">
+            <button class="slide-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
 
         <script>
-            function showGallery(city) {
-                var images = {
-                    paris: ["images/paris1.png", "images/paris2.png", "images/paris3.png"],
-                    london: ["images/london1.png", "images/london2.png", "images/london3.png"],
-                    rome: ["images/rome1.png", "images/rome2.png", "images/rome3.png"],
-                    prague: ["images/prague1.png", "images/prague2.png", "images/prague3.png"],
-                    barcelona: ["images/barcelona1.png", "images/barcelona2.png", "images/barcelona3.png"],
-                    seoul: ["images/seoul1.png", "images/seoul2.png", "images/seoul3.png"]
-                };
+            const galleries = {
+                france: ["images/paris1.png", "images/paris2.png", "images/paris3.png"],
+                uk: ["images/london1.png", "images/london2.png", "images/london3.png"],
+                italy: ["images/rome1.png", "images/rome2.png", "images/rome3.png"],
+                czech: ["images/prague1.png", "images/prague2.png", "images/prague3.png"],
+                spain: ["images/barcelona1.png", "images/barcelona2.png", "images/barcelona3.png"],
+                korea: ["images/seoul1.png", "images/seoul2.png", "images/seoul3.png"]
+            };
 
-                var galleryDiv = document.getElementById("gallery");
-                galleryDiv.innerHTML = "";
+            let currentCountry = null;
+            let currentIndex = 0;
 
-                var html = "<table><tr>";
-                for (var i = 0; i < 3; i++) {
-                    html += "<td><img src='" + images[city][i] + "' width='200px'></td>";
-                }
-                html += "</tr></table>";
+            function showGallery(country) {
+                const box = document.getElementById("gallery-box");
+                const img = document.getElementById("current-image");
 
-                galleryDiv.innerHTML = html;
+                if (currentCountry === country && box.style.display === "block") {
+                // 같은 나라 또 누르면 닫기
+                box.style.display = "none";
+                currentCountry = null;
+                return;
+            }
+
+                currentCountry = country;
+                currentIndex = 0;
+                img.src = galleries[country][currentIndex];
+                box.style.display = "block";
+            }
+
+            function changeSlide(direction) {
+                if (!currentCountry) return;
+                const imgs = galleries[currentCountry];
+                currentIndex = (currentIndex + direction + imgs.length) % imgs.length;
+                document.getElementById("current-image").src = imgs[currentIndex];
             }
         </script>
 
