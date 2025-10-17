@@ -1,40 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Homepage</title>
-    </head>
-    <body>
-        <h1>
-            <img src="images/guide.png" alt="city image" width="50px">
-            Welcome to the city guide INFORMATION PAGE
-        </h1>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>City Tour Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">INFO</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="schedule.html">SCHEDULE</a></li>
-            </ul>
-        </nav>
+<body>
+  <!-- 헤더 -->
+ <header>
+    <div class="logo" onclick="location.href='index.html'"> 
+      <img src="images/logo.png" alt="City Tour Guide Logo"></div>
+      
+  <!-- 메뉴 -->
+  <nav>
+    <a href="about.html">INFO</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="schedule.html">SCHEDULE</a>
+  </nav>
+  </header>
 
-        <hr>
+  <section class="about">
+    <h2>City Information ✈️</h2>
+    <p class="about-desc">세계 주요 도시의 여행 정보, 명소, 꿀팁을 한눈에!</p>
 
-        <div class = "countries">
-            <h2>Countries</h2>
-            <h3>Click the image for the wikipedia link</h3>
-            <table>
-                <tr>
-                    <td><a href="https://en.wikipedia.org/wiki/Paris" target="_blank"><img src="images/france.png" alt="france flag" width="100px" hspace="30"></a><br>Paris</td>
-                    <td><a href="https://en.wikipedia.org/wiki/London" target="_blank"><img src="images/uk.png" alt="uk flag" width="100px" hspace="30"></a><br>London</td>
-                    <td><a href="https://en.wikipedia.org/wiki/Rome" target="_blank"><img src="images/italy.png" alt="italy flag" width="100px" hspace="30"></a><br>Rome</td>
-                    <td><a href="https://en.wikipedia.org/wiki/Prague" target="_blank"><img src="images/czech.png" alt="czech flag" width="100px" hspace="30"></a><br>Prague</td>
-                    <td><a href="https://en.wikipedia.org/wiki/Barcelona" target="_blank"><img src="images/spain.png" alt="spain flag" width="100px" hspace="30"></a><br>Barcelona</td>
-                    <td><a href="https://en.wikipedia.org/wiki/Seoul" target="_blank"><img src="images/korea.png" alt="korea flag" width="100px" hspace="30"></a><br>Seoul</td>
-                </tr>
-            </table>
-        </div>
+    <!-- 도시 카드 목록 -->
+    <div class="city-container">
 
-    </body>
-</html>
+      <!-- 파리 -->
+      <div class="city-card">
+        <img src="images/paris3.png" alt="Paris">
+        <h3>파리 (Paris, France)</h3>
+        <p class="city-intro">예술과 낭만의 도시. 세느 강변을 따라 미식과 문화를 즐길 수 있는 유럽의 중심지.</p>
+        <ul>
+          <li><strong>루브르 박물관:</strong> <a href="https://www.louvre.fr/en" target="_blank">louvre.fr</a></li>
+          <li><strong>에펠탑:</strong> <a href="https://www.toureiffel.paris/en" target="_blank">toureiffel.paris</a></li>
+          <li><strong>베르사유 궁전:</strong> <a href="https://en.chateauversailles.fr" target="_blank">chateauversailles.fr</a></li>
+          <li><strong>생트샤펠:</strong> <a href="https://www.sainte-chapelle.fr/en" target="_blank">sainte-chapelle.fr</a></li>
+          <li><strong>노트르담 대성당:</strong> <a href="https://www.notredamedeparis.fr/en" target="_blank">notredamedeparis.fr</a></li>
+        </ul>
+        <p class="tip">💡 Paris Museum Pass로 우선 입장 가능. <br> *소매치기 주의!</p>
+      </div>
+
+      <!-- 런던 -->
+      <div class="city-card">
+        <img src="images/london1.png" alt="London">
+        <h3>런던 (London, United Kingdom)</h3>
+        <p class="city-intro">왕실 전통과 현대 감성이 어우러진 도시. 뮤지컬, 예술, 공원 등 볼거리 가득.</p>
+        <ul>
+          <li><strong>버킹엄 궁전:</strong> <a href="https://www.royalparks.org.uk/parks/st-jamess-park" target="_blank">royalparks.org.uk</a></li>
+          <li><strong>빅벤 & 웨스트민스터 궁전:</strong> <a href="https://www.parliament.uk/bigben" target="_blank">parliament.uk</a></li>
+          <li><strong>웨스트민스터 사원:</strong> <a href="https://www.westminster-abbey.org" target="_blank">westminster-abbey.org</a></li>
+          <li><strong>런던아이:</strong> <a href="https://www.londoneye.com" target="_blank">londoneye.com</a></li>
+          <li><strong>대영박물관:</strong> <a href="https://www.britishmuseum.org" target="_blank">britishmuseum.org</a></li>
+        </ul>
+        <p class="tip">💡 Oyster 카드로 교통비 절약. <br>*비가 자주 오니 우산 필수!</p>
+      </div>
+
+      <!-- 로마 -->
+      <div class="city-card">
+        <img src="images/rome3.png" alt="Rome">
+        <h3>로마 (Rome, Italy)</h3>
+        <p class="city-intro">고대 유적과 예술이 공존하는 도시. 바티칸과 함께 유럽 문명의 중심지.</p>
+        <ul>
+          <li><strong>콜로세움:</strong> <a href="https://www.coopculture.it/en/colosseo-e-shop.cfm" target="_blank">coopculture.it</a></li>
+          <li><strong>바티칸 박물관:</strong> <a href="https://www.museivaticani.va" target="_blank">museivaticani.va</a></li>
+          <li><strong>판테온:</strong> <a href="https://www.turismoroma.it/en/places/pantheon" target="_blank">turismoroma.it</a></li>
+          <li><strong>트레비 분수:</strong> <a href="https://www.turismoroma.it/en/places/trevi-fountain" target="_blank">trevi-fountain</a></li>
+        </ul>
+        <p class="tip">💡 대부분 도보로 이동 가능. <br>여름엔 오전·저녁 일정 추천!</p>
+      </div>
+
+      <!-- 프라하 -->
+      <div class="city-card">
+        <img src="images/prague1.png" alt="Prague">
+        <h3>프라하 (Prague, Czech Republic)</h3>
+        <p class="city-intro">중세 분위기를 그대로 간직한 낭만의 도시. 야경이 아름답기로 유명.</p>
+        <ul>
+          <li><strong>프라하 성:</strong> <a href="https://www.hrad.cz/en/prague-castle-for-visitors" target="_blank">hrad.cz</a></li>
+          <li><strong>카를교:</strong> <a href="https://www.prague.eu/en/object/places/93/charles-bridge-karluv-most" target="_blank">prague.eu</a></li>
+          <li><strong>올드타운 광장:</strong> <a href="https://www.prague.eu/en/object/places/59/old-town-square" target="_blank">old-town-square</a></li>
+        </ul>
+        <p class="tip">💡 Prague Visitor Pass로 교통·명소 할인!</p>
+      </div>
+
+      <!-- 바르셀로나 -->
+      <div class="city-card">
+        <img src="images/barcelona2.png" alt="Barcelona">
+        <h3>바르셀로나 (Barcelona, Spain)</h3>
+        <p class="city-intro">가우디 예술과 지중해 감성이 만난 도시. 타파스와 해변이 매력적!</p>
+        <ul>
+          <li><strong>사그라다 파밀리아:</strong> <a href="https://sagradafamilia.org/en/home" target="_blank">sagradafamilia.org</a></li>
+          <li><strong>구엘 공원:</strong> <a href="https://parkguell.barcelona/en" target="_blank">parkguell.barcelona</a></li>
+          <li><strong>카사 바트요:</strong> <a href="https://www.casabatllo.es/en" target="_blank">casabatllo.es</a></li>
+        </ul>
+        <p class="tip">💡 주요 명소는 예약 필수. <br>해변과 도심이 가까워 일정 조정 쉬움.</p>
+      </div>
+
+      <!-- 서울 -->
+      <div class="city-card">
+        <img src="images/seoul1.png" alt="Seoul">
+        <h3>서울 (Seoul, South Korea)</h3>
+        <p class="city-intro">전통과 현대가 공존하는 도시. K-culture와 미식의 중심지.</p>
+        <ul>
+          <li><strong>경복궁:</strong> <a href="https://royal.cha.go.kr/guide/gyeongbokgung.jsp" target="_blank">gyeongbokgung.jsp</a></li>
+          <li><strong>남산서울타워:</strong> <a href="https://www.seoultower.co.kr/" target="_blank">seoultower.co.kr</a></li>
+          <li><strong>북촌 한옥마을:</strong> <a href="https://korean.visitseoul.net/attractions/BukchonHanokVillage_/73" target="_blank">visitseoul.net</a></li>
+        </ul>
+        <p class="tip">💡 교통카드로 편리한 이동. <br>시장·길거리 음식은 현금 유용!</p>
+      </div>
+
+    </div>
+  </section>
+
+   <footer>
+    <p>© 2025 Travel Moments | Made by Team T0 </p>
+   </footer>
+</body>

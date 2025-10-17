@@ -1,165 +1,69 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>투어 이름</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Noto Sans KR", sans-serif;
-      background-color: #f9f9f9;
-    }
-
-    /* 상단 헤더 */
-    header {
-      background-color: #cde4f8;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 40px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .logo {
-      font-size: 1.8em;
-      font-weight: bold;
-      color: #333;
-      cursor: pointer;
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .search-box input {
-      padding: 6px 10px;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      outline: none;
-    }
-
-    .home-btn {
-      background-color: #0078d7;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      padding: 6px 14px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .home-btn:hover {
-      background-color: #005fa3;
-    }
-
-    /* 네비게이션 메뉴 */
-    nav {
-      background-color: #d5ecff;
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      padding: 15px 0;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: #333;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #0078d7;
-    }
-
-    /* 메인 배너 */
-    .banner {
-      height: 400px;
-      background: url("tour-banner.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2em;
-      font-weight: bold;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    }
-
-    /* Countries 섹션 */
-    .countries {
-      text-align: center;
-      padding: 40px 0;
-    }
-
-    .countries h2 {
-      font-size: 1.8em;
-      margin-bottom: 25px;
-    }
-
-    .country-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .country {
-      width: 150px;
-      height: 100px;
-      background-color: #e0e0e0;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .country:hover {
-      background-color: #cde4f8;
-      transform: scale(1.05);
-    }
-  </style>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>City Tour Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <!-- 헤더 -->
   <header>
-    <div class="logo" onclick="location.href='index.html'">투어 이름</div>
+    <div class="logo" onclick="location.href='index.html'"> 
+      <img src="images/logo.png" alt="City Tour Guide Logo"></div>
     <div class="header-right">
       <div class="search-box">
         <input type="text" placeholder="검색...">
       </div>
-      <button class="home-btn" onclick="location.href='index.html'">HOME</button>
+      <button class="home-btn" onclick="location.href='index.html'">Enter</button> <!-- 검색 기능은 아직 구현 안함-->
     </div>
   </header>
 
   <!-- 메뉴 -->
   <nav>
-    <a href="#info">INFO</a>
-    <a href="#gallery">GALLERY</a>
-    <a href="#schedule">SCHEDULE</a>
+    <a href="about.html">INFO</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="schedule.html">SCHEDULE</a>
   </nav>
 
-  <!-- 메인 배너 -->
+  <!-- 메인 배너 섹션 -->
   <section class="banner">
-    <div>여행의 순간을 함께합니다 ✈️</div>
-  </section>
-
-  <!-- Countries 섹션 -->
-  <section class="countries">
-    <h2>COUNTRIES</h2>
-    <div class="country-list">
-      <div class="country">KOREA</div>
-      <div class="country">JAPAN</div>
-      <div class="country">FRANCE</div>
-      <div class="country">ITALY</div>
-      <div class="country">USA</div>
+    <div class="banner-text">
+      <h2>Travel far enough, you meet yourself ✈️</h2>
     </div>
   </section>
+
+<!-- Countries 섹션 -->
+<section class="countries">
+  <h2>Cities</h2>
+  <div class="country-list">
+    <div class="country paris"><span>Paris</span></div>
+    <div class="country london"><span>London</span></div>
+    <div class="country rome"><span>Rome</span></div>
+    <div class="country prague"><span>Prague</span></div>
+    <div class="country barcelona"><span>Barcelona</span></div>
+    <div class="country seoul"><span>Seoul</span></div>
+  </div>
+</section>
+
+
+  <!-- paris 섹션 -->
+
+  <!-- london 섹션-->
+
+  <!-- rome 섹션-->
+
+  <!-- prague 섹션-->
+
+  <!-- barcelona 섹션-->
+
+  <!-- seoul 섹션-->
+
+  <!-- 저작자나 저작권 정보 섹션-->
+  <footer>
+    <p>© 2025 Travel Moments | Made by Team T0 </p>
+  </footer>
+
 </body>
 </html>
