@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Homepage</title>
-        <link rel = "stylesheet" href = "style_gallery.css">
-    </head>
-    <body>
-        <header>
-            <div class="logo" onclick="location.href='index.html'">투어 이름</div>
-            <div class="header-right">
-            <div class="search-box">
-            <input type="text" placeholder="검색...">
-            </div>
-            <button class="home-btn" onclick="location.href='index.html'">HOME</button>
-            </div>
-        </header>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>City Tour Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
 
-        <nav>
-            <a href="about.html">INFO</a>
-            <a href="gallery.html">GALLERY</a>
-            <a href="schedule.html">SCHEDULE</a>
-        </nav>
-
-        <section class="banner">
-            <div>여행의 순간을 함께합니다 ✈️</div>
-        </section>
-
-        <h2>나라를 선택하세요</h2>
+<body>
+  <!-- 헤더 -->
+ <header>
+    <div class="logo" onclick="location.href='index.html'"> 
+      <img src="images/logo.png" alt="City Tour Guide Logo"></div>
+      
+  <!-- 메뉴 -->
+  <nav>
+    <a href="about.html">INFO</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="schedule.html">SCHEDULE</a>
+  </nav>
+  </header>
+    <section class="gallery">
+        <h2>Select a country</h2>
         <div class="flag-row">
             <img src="images/france.png" alt="France" onclick="showGallery('france')">
             <img src="images/uk.png" alt="UK" onclick="showGallery('uk')">
@@ -45,12 +39,12 @@
 
         <script>
             const galleries = {
-                france: ["images/paris1.png", "images/paris2.png", "images/paris3.png"],
-                uk: ["images/london1.png", "images/london2.png", "images/london3.png"],
-                italy: ["images/rome1.png", "images/rome2.png", "images/rome3.png"],
-                czech: ["images/prague1.png", "images/prague2.png", "images/prague3.png"],
-                spain: ["images/barcelona1.png", "images/barcelona2.png", "images/barcelona3.png"],
-                korea: ["images/seoul1.png", "images/seoul2.png", "images/seoul3.png"]
+                france: ["images/paris3.png", "images/paris4.jpg", "images/paris5.jpg", "images/paris6.jpg", "images/paris7.jpg", "images/paris8.jpg", "images/paris9.jpg", "images/paris10.jpg", "images/paris11.jpg", "images/paris12.jpg", "images/paris13.jpg", "images/paris14.jpg", "images/paris15.jpg", "images/paris16.jpg"],
+                uk: ["images/london1.jpg", "images/london2.jpg", "images/london3.jpg", "images/london4.jpg", "images/london5.jpg", "images/london6.jpg", "images/london7.jpg", "images/london8.jpg", "images/london9.jpg", "images/london10.jpg", "images/london11.jpg", "images/london12.jpg", "images/london13.jpg", "images/london14.jpg", "images/london15.jpg"],
+                italy: ["images/rome1.jpg", "images/rome2.jpg", "images/rome3.jpg", "images/rome4.jpg", "images/rome5.jpg", "images/rome6.jpg", "images/rome7.jpg", "images/rome8.jpg", "images/rome9.jpg", "images/rome10.jpg", "images/rome11.jpg", "images/rome12.jpg", "images/rome13.jpg", "images/rome14.jpg"],
+                czech: ["images/prague1.jpg", "images/prague2.jpg", "images/prague3.jpg", "images/prague4.jpg", "images/prague5.jpg", "images/prague6.jpg", "images/prague7.jpg", "images/prague8.jpg", "images/prague9.jpg", "images/prague10.jpg", "images/prague11.jpg", "images/prague12.jpg", "images/prague13.jpg"],
+                spain: ["images/barcelona1.jpg", "images/barcelona2.jpg", "images/barcelona3.jpg", "images/barcelona4.jpg", "images/barcelona5.jpg", "images/barcelona6.jpg", "images/barcelona7.jpg", "images/barcelona8.jpg", "images/barcelona9.jpg", "images/barcelona10.jpg", "images/barcelona11.jpg", "images/barcelona12.jpg", "images/barcelona13.jpg", "images/barcelona14.jpg", "images/barcelona15.jpg"],
+                korea: ["images/seoul1.jpg", "images/seoul2.jpg", "images/seoul3.jpg", "images/seoul4.jpg", "images/seoul5.jpg", "images/seoul6.jpg", "images/seoul7.jpg", "images/seoul8.jpg", "images/seoul9.jpg", "images/seoul10.jpg", "images/seoul11.jpg", "images/seoul12.jpg", "images/seoul13.jpg", "images/seoul14.jpg", "images/seoul15.jpg"]
             };
 
             let currentCountry = null;
@@ -80,6 +74,6 @@
                 document.getElementById("current-image").src = imgs[currentIndex];
             }
         </script>
-
+        </section>
     </body>
 </html>

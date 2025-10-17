@@ -1,348 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Homepage</title>
-    </head>
-    <body>
-        <h1>
-            <img src="images/guide.png" alt="city image" width="50px">
-            Welcome to the city guide SCHEDULE PAGE
-        </h1>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>City Tour Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">INFO</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="schedule.html">SCHEDULE</a></li>
-            </ul>
-        </nav>
-
-        <hr>
-
-        <div class = "countries">
-            <h2>Countries</h2>
-            <h3>Select cities for images</h3>
-            <table>
-                <tr>
-                    <td><a href="#paris" target="_blank"><img src="images/france.png" alt="france flag" width="100px" hspace="30"></a><br>Paris</td>
-                    <td><a href="#london" target="_blank"><img src="images/uk.png" alt="uk flag" width="100px" hspace="30"></a><br>London</td>
-                    <td><a href="#rome" target="_blank"><img src="images/italy.png" alt="italy flag" width="100px" hspace="30"></a><br>Rome</td>
-                    <td><a href="#prague" target="_blank"><img src="images/czech.png" alt="czech flag" width="100px" hspace="30"></a><br>Prague</td>
-                    <td><a href="#barcelona" target="_blank"><img src="images/spain.png" alt="spain flag" width="100px" hspace="30"></a><br>Barcelona</td>
-                    <td><a href="#seoul" target="_blank"><img src="images/korea.png" alt="korea flag" width="100px" hspace="30"></a><br>Seoul</td>
-                </tr>
-            </table>
+<body>
+  <!-- 헤더 -->
+ <header>
+    <div class="logo" onclick="location.href='index.html'"> 
+      <img src="images/logo.png" alt="City Tour Guide Logo"></div>
+      
+  <!-- 메뉴 -->
+  <nav>
+    <a href="about.html">INFO</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="schedule.html">SCHEDULE</a>
+  </nav>
+  </header>
+    <section class="gallery">
+        <h2>Select a country</h2>
+        <div class="flag-row">
+            <img src="images/france.png" alt="France" onclick="showGallery('france')">
+            <img src="images/uk.png" alt="UK" onclick="showGallery('uk')">
+            <img src="images/italy.png" alt="Italy" onclick="showGallery('italy')">
+            <img src="images/czech.png" alt="Czech" onclick="showGallery('czech')">
+            <img src="images/spain.png" alt="Spain" onclick="showGallery('spain')">
+            <img src="images/korea.png" alt="Korea" onclick="showGallery('korea')">
         </div>
 
-<!-- PARIS -->
+        <div id="gallery-box">
+            <button class="slide-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+            <img id="current-image" src="" alt="">
+            <button class="slide-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
 
-        <hr>
-        <h2 id="paris">Paris</h2>
-        <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임<br>
-                    Café Verlet (256 Rue Saint-Honoré) — 분위기 좋은 카페 & 브런치 메뉴 가능
-                </td>
-            </tr>
-            <tr>
-                <td>09:30</td>
-                <td>루브르 박물관 입장 / 관람 시작<br>
-                    Louvre Museum 공식 사이트 참조 (내부 카페/음식 옵션도 있음) 
-                </td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td>
-                    점심식사<br>
-                    Le Café Marly — 루브르 바로 옆 레스토랑<br>
-                    Brasserie du Louvre — 정통 프랑스 요리 브라세리 스타일
-                </td>
-            </tr>
-            <tr>
-                <td>13:30</td>
-                <td>루브르 부속 전시장 / 조각 · 회화 감상</td>
-            </tr>
-            <tr>
-                <td>15:30</td>
-                <td>튀일리 정원 산책 → 개선문/샹젤리제 쪽 이동</td>
-            </tr>
-            <tr>
-                <td>17:30</td>
-                <td>에펠탑으로 이동   (에펠탑 전망대 사전 예약)</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사 : 개선문 근처 또는 에펠탑 주변 식당</td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>에펠탑 야경 관람 & 라이트 쇼 (밤 10시경 라이트 쇼)</td>
-            </tr>
-            <tr>
-                <td>21:30</td>
-                <td>바 또는 루프탑 바 방문 파리 중심 루프탑 바 중 하나에서 야경 구경</td>
-            </tr>
-        </table>
+        <script>
+            const galleries = {
+                france: ["Schedule/1.png", "Schedule/2.png", "Schedule/3.png", "Schedule/4.png", "Schedule/5.png"],
+                uk: ["Schedule/6.png", "Schedule/7.png", "Schedule/8.png", "Schedule/9.png", "Schedule/10.png", "Schedule/11.png"],
+                italy: ["Schedule/12.png", "Schedule/13.png", "Schedule/14.png", "Schedule/15.png", "Schedule/16.png", "Schedule/17.png", "Schedule/18.png"],
+                czech: ["Schedule/19.png", "Schedule/20.png", "Schedule/21.png", "Schedule/22.png", "Schedule/23.png"],
+                spain: ["Schedule/24.png", "Schedule/25.png", "Schedule/26.png", "Schedule/27.png", "Schedule/28.png", "Schedule/29.png"],
+                korea: ["Schedule/30.png", "Schedule/31.png", "Schedule/32.png", "Schedule/33.png", "Schedule/34.png", "Schedule/35.png"],
+            };
 
-<!-- LONDON -->
+            let currentCountry = null;
+            let currentIndex = 0;
 
-        <hr>
-        <h2 id="london">London</h2>
-        <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임<br>
-                    Dominique Ansel Bakery London 등 베이커리 카페로 가벼운 아침 식사
-                </td>
-            </tr>
-            <tr>
-                <td>09:30</td>
-                <td>버킹엄 궁전 & 근위병 교대식</td>
-            </tr>
-            <tr>
-                <td>10:30</td>
-                <td>웨스트민스터 사원 + 빅벤 + 국회의사당 구경</td>
-            </tr>
-            <tr>
-                <td>12:30</td>
-                <td>
-                    점심식사<br>
-                    Dishoom (Covent Garden or Shoreditch 지점)<br>
-                    Padella (파스타)
-                </td>
-            </tr>
-            <tr>
-                <td>14:00</td>
-                <td>템즈강 유람선 + 런던아이 탑승</td>
-            </tr>
-            <tr>
-                <td>15:30</td>
-                <td>세인트 폴 대성당 / 밀레니엄 브리지 산책</td>
-            </tr>
-            <tr>
-                <td>17:00</td>
-                <td>타워브리지 & 런던 타워 구경</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>
-                    저녁식사<br>
-                    Core by Clare Smyth (미슐랭 스타 레스토랑)<br>
-                    Andrew Montgomery 고급 레스토랑<br>
-                    Condé Nast Traveler
-                </td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>웨스트엔드 뮤지컬 관람 / 야경 산책</td>
-            </tr>
-            <tr>
-                <td>22:30</td>
-                <td>근처 디저트 가게</td>
-            </tr>
-        </table>
+            function showGallery(country) {
+                const box = document.getElementById("gallery-box");
+                const img = document.getElementById("current-image");
 
-<!-- ROME -->
+                if (currentCountry === country && box.style.display === "block") {
+                // 같은 나라 또 누르면 닫기
+                box.style.display = "none";
+                currentCountry = null;
+                return;
+            }
 
-        <hr>
-        <h2 id="rome">Rome</h2>
-        <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임</td>
-            </tr>
-            <tr>
-                <td>09:00</td>
-                <td>콜로세움 & 로마 포럼 투어</td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td>
-                    점심식사<br>
-                    La Taverna dei Fori Imperiali — 포로 로마노 근처 분위기 좋은 전통 로마 요리 맛집<br>
-                    Armando al Pantheon (판테온 근처) — 클래식한 로마 음식점 추천 리스트에도 자주 등장함
-                </td>
-            </tr>
-            <tr>
-                <td>13:30</td>
-                <td>판테온 / 나보나 광장 / 판테온 주변 산책</td>
-            </tr>
-            <tr>
-                <td>15:00</td>
-                <td>바티칸 시국 (성 베드로 대성당 / 시스티나 성당)</td>
-            </tr>
-            <tr>
-                <td>17:30</td>
-                <td>트라스테베레 지역으로 이동 & 구경</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사<br>
-                    Osteria da Zi’ Umberto 트라스테베레 지역의 골목 안 위치<br>
-                    Taverna Trilussa 전통식당
-                </td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>트레비 분수 야경 / 스페인 계단 산책</td>
-            </tr>
-            <tr>
-                <td>21:30</td>
-                <td>젤라또 / 디저트 카페 (로마 중심가 골목길 젤라또 가게 탐방)</td>
-            </tr>
-        </table>
+                currentCountry = country;
+                currentIndex = 0;
+                img.src = galleries[country][currentIndex];
+                box.style.display = "block";
+            }
 
-<!-- PRAGUE -->
-
-        <hr>
-        <h2 id="prague">Prague</h2>
-        <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임<br>
-                    프라하 올드타운 쪽 카페 산책
-                </td>
-            </tr>
-            <tr>
-                <td>09:30</td>
-                <td>프라하 성 & 성 비투스 대성당 방문</td>
-            </tr>
-            <tr>
-                <td>11:30</td>
-                <td>
-                    점심식사<br>
-                    올드타운 근처 전통 체코 음식점 (굴라시, 스비치코바 등)
-                </td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td>카를교 산책 → 구시가지 천문시계탑</td>
-            </tr>
-            <tr>
-                <td>15:00</td>
-                <td>유대인 지구 (Josefov) 탐방 / 골목길 산책</td>
-            </tr>
-            <tr>
-                <td>17:00</td>
-                <td>망토다리 건너 강변 산책</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사<br>
-                    Kampa Park (강변 분위기 좋은 레스토랑), 또는 Mlýnec 같은 모던하면서도 전통 메뉴를 잘 살린 레스토랑
-                </td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>프라하 성 야경 / 강변 야경 감상</td>
-            </tr>
-            <tr>
-                <td>21:30</td>
-                <td>디저트 혹은 맥주 (체코는 맥주로 유명 -> 로컬 펍 또는 브루어리 방문해도 좋음)
-                </td>
-            </tr>
-        </table>
-
-<!-- BARCELONA -->
-
-        <hr>
-        <h2 id="barcelona">Barcelona</h2>
-        <table border="1" cellpadding="10">
-            <tr>
-                <td>08:30</td>
-                <td>아침 & 카페 타임
-                </td>
-            </tr>
-            <tr>
-                <td>09:30</td>
-                <td>사그라다 파밀리아 성당 관람 
-                </td>
-            </tr>
-            <tr>
-                <td>11:00</td>
-                <td>
-                    점심식사<br>
-                    고딕 지구 근처 식당 이용 / 카탈루냐식 레스토랑
-                </td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td>고딕 지구 산책 / 보케리아 시장 탐방   (La Boqueria 시장) — 스탠드 음식 즐기기</td>
-            </tr>
-            <tr>
-                <td>14:30</td>
-                <td>구엘 공원 산책 → 가우디 건축 탐방 (카사 바트요, 카사 밀라 등)</td>
-            </tr>
-            <tr>
-                <td>17:30</td>
-                <td>몬주익 언덕 / 미로 공원 산책 및 전망 감상</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사<br>
-                    해산물 파에야 / 타파스 중심 레스토랑 선택
-                </td>
-            </tr>
-            <tr>
-                <td>20:30</td>
-                <td>몬주익 분수 쇼 / 야경 산책</td>
-            </tr>
-            <tr>
-                <td>21:30</td>
-                <td>디저트 / 바 거리 산책 ㅡ 고딕지구 / 엘 보른 (El Born) 쪽 바 & 디저트 숍 다수 존재</td>
-            </tr>
-        </table>
-
-<!-- SEOUL -->
-
-        <hr>
-        <h2 id="seoul">Seoul</h2>
-        <table border="1" cellpadding="10">
-            <tr>
-                <td>10:00</td>
-                <td>남산타워 (N서울타워) → 케이블카 또는 버스로 이동<br>
-                    남산타워 전망대 & 서울 전경 감상
-                </td>
-            </tr>
-            <tr>
-                <td>11:30</td>
-                <td>이태원 이동 ㅡ 경리단길 
-                </td>
-            </tr>
-            <tr>
-                <td>12:30</td>
-                <td>
-                    점심식사<br>
-                    Maple Tree House (한식 바베큐 / 스테이크 스타일)
-                </td>
-            </tr>
-            <tr>
-                <td>14:00</td>
-                <td>이태원 거리 탐방</td>
-            </tr>
-            <tr>
-                <td>15:30</td>
-                <td>카페 (이태원 근처) / 디저트</td>
-            </tr>
-            <tr>
-                <td>17:30</td>
-                <td>해방촌  주변 가볍게 둘러보기</td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>저녁식사<br>
-                Low & Slow (이태원 우수 스테이크/바비큐)<br>
-                Anssi Makgeolli (안씨막걸리) — 전통주 + 한식 안주 스타일
-            </td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td>이태원 저녁 거리 즐기기</td>
-            </tr>
-        </table>
-
+            function changeSlide(direction) {
+                if (!currentCountry) return;
+                const imgs = galleries[currentCountry];
+                currentIndex = (currentIndex + direction + imgs.length) % imgs.length;
+                document.getElementById("current-image").src = imgs[currentIndex];
+            }
+        </script>
+        </section>
     </body>
 </html>
+

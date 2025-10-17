@@ -314,8 +314,8 @@ footer {
 
 #gallery-box {
   position: relative;
-  width: 500px;
-  height: 400px;
+  width: 80%;
+  max-width: 800px;
   margin: 60px auto;
   background: #fff;
   border-radius: 15px;
@@ -327,8 +327,10 @@ footer {
 #gallery-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; 
+  background-color: #000; 
 }
+
 
 .slide-btn {
   position: absolute;
