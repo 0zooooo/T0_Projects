@@ -5,7 +5,7 @@
 
 ## 프로젝트 구성
 - index.html : 메인 홈페이지
-- about.html : 도시 기본 정보 및 위키백과 링크
+- about.html : 도시 기본 정보 + 음식 레시피
 - gallery.html : 도시별 관광 명소 갤러리
 - schedule.html : 도시별 하루 여행 스케줄표
 - style.css
