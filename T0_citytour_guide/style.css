@@ -273,10 +273,10 @@ header {
 
 :root{
   --bg:#ffffff;
-  --fg:#1f2937;      /* 본문색 */
-  --sub:#4b5563;     /* 보조 텍스트 */
-  --brand:#1e90ff;   /* 파랑 포인트 */
-  --card:#ffffff;    /* 카드 배경 */
+  --fg:#1f2937;      
+  --sub:#4b5563;     
+  --brand:#1e90ff;   
+  --card:#ffffff;    
   --radius:16px;
   --shadow:0 8px 24px rgba(0,0,0,.06);
   --border:1px solid rgba(30,144,255,.18);
@@ -298,10 +298,14 @@ header {
   font-size:clamp(1.25rem,2.6vw,1.65rem);
   line-height:1.25;
 }
+
 .recipe h4::after{
   content:"";
   display:block;
-  width:64px;height:3px;margin-top:10px;border-radius:999px;
+  width:64px;
+  height:3px;
+  margin-top:10px;
+  border-radius:999px;
   background:linear-gradient(90deg,var(--brand),transparent);
 }
 
@@ -314,27 +318,64 @@ header {
   margin-top:6px;
 }
 
-.recipe p{margin:0;color:var(--sub);font-size:clamp(.95rem,1.7vw,1.05rem);}
-.recipe h5{margin:12px 0 6px;font-size:clamp(1.05rem,2vw,1.15rem);font-weight:700}
+.recipe p{
+  margin:0;
+  color:var(--sub);
+  font-size:clamp(.95rem,1.7vw,1.05rem);
+}
 
-.recipe ul,.recipe ol{margin:0;padding-left:1.1em;font-size:clamp(.95rem,1.7vw,1.05rem);}
-.recipe ul li{list-style:none;position:relative;padding-left:.9em;margin:.25em 0;}
+.recipe h5{
+  margin:12px 0 6px;
+  font-size:clamp(1.05rem,2vw,1.15rem);
+  font-weight:700
+}
+
+.recipe ul,.recipe ol{
+  margin:0;padding-left:1.1em;
+  font-size:clamp(.95rem,1.7vw,1.05rem);
+}
+
+.recipe ul li{
+  list-style:none;
+  position:relative;
+  padding-left:.9em;
+  margin:.25em 0;
+}
+
 .recipe ul li::before{
-  content:"";position:absolute;left:0;top:.68em;width:.5em;height:.5em;border-radius:4px;
-  background:var(--brand);opacity:.9;
+  content:"";
+  position:absolute;
+  left:0;top:.68em;
+  width:.5em;
+  height:.5em;
+  border-radius:4px;
+  background:var(--brand);
+  opacity:.9;
 }
-.recipe ol{counter-reset:step;}
+
+.recipe ol{
+  counter-reset:step;
+}
+
 .recipe ol li{
-  list-style:none;counter-increment:step;position:relative;padding-left:2.1em;margin:.4em 0;
+  list-style:none;
+  counter-increment:step;
+  position:relative;
+  padding-left:2.1em;
+  margin:.4em 0;
 }
+
 .recipe ol li::before{
   content:counter(step);
-  position:absolute;left:0;top:.15em;width:1.6em;height:1.6em;border-radius:10px;
-  display:inline-grid;place-items:center;font-weight:700;
-  background:rgba(30,144,255,.10);color:var(--brand);
+  position:absolute;left:0;
+  top:.15em;width:1.6em;
+  height:1.6em;border-radius:10px;
+  display:inline-grid;
+  place-items:center;font-weight:700;
+  background:rgba(30,144,255,.10);
+  color:var(--brand);
   border:1px solid rgba(30,144,255,.25);
 }
-
 
 /* footer */
 footer {
