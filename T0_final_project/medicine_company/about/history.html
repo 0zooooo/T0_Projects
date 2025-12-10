@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제이피바이오(주) | 회사연혁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#004080',
+            primaryLight: '#4f8fdc'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center text-xs font-bold">
+          JP
+        </div>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold">제이피바이오(주)</p>
+          <p class="text-[11px] text-slate-500">JPBIO Corp.</p>
+        </div>
+      </a>
+      <nav class="flex items-center gap-4 text-xs sm:text-sm font-medium">
+        <a href="company-overview.html" class="hover:text-primary">회사개요</a>
+        <a href="company-history.html" class="text-primary">회사연혁</a>
+        <a href="company-philosophy.html" class="hover:text-primary">경영이념</a>
+        <a href="index.html" class="hidden sm:inline hover:text-primary">메인으로</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-slate-900 to-primary py-14">
+    <div class="max-w-5xl mx-auto px-4 text-white">
+      <p class="text-[11px] uppercase tracking-[0.24em] text-blue-200 mb-2">
+        History
+      </p>
+      <h1 class="text-2xl sm:text-3xl font-bold mb-3">회사연혁</h1>
+      <p class="text-sm sm:text-base text-blue-100 max-w-2xl leading-relaxed">
+        설립 이후 연구 인프라 확충과 기술이전, 개량신약 임상 및 허가를 통해
+        제제기술 전문 R&amp;D 파트너로 성장해 왔습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 본문 -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-3 text-primary">타임라인 개요</h2>
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm text-sm text-slate-700">
+        <p>2016~2019 : 설립 및 기반 구축</p>
+        <p>2020~2025 : 연구소 확장, 개량신약 임상·허가 및 해외 기술이전</p>
+        <p>2026~2030 : 글로벌 기술이전 확대 및 약물 가용화 플랫폼 구축</p>
+      </div>
+    </section>
+
+    <!-- 연도별 연혁 (타임라인) -->
+    <section class="space-y-8 text-sm">
+
+      <!-- 2016~2019 -->
+      <div class="flex gap-4">
+        <div class="w-28 shrink-0 text-primary font-semibold">2016~2019</div>
+        <div class="flex-1 bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
+          <ul class="list-disc list-inside text-slate-700 space-y-1">
+            <li>제이피바이오㈜ 설립</li>
+            <li>기업부설연구소, 벤처기업 인증 취득</li>
+            <li>개량신약·제네릭 중심 개발 착수</li>
+            <li>의약품 6품목 허가 획득</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2020~2025 -->
+      <div class="flex gap-4">
+        <div class="w-28 shrink-0 text-primary font-semibold">2020~2025</div>
+        <div class="flex-1 bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
+          <ul class="list-disc list-inside text-slate-700 space-y-1">
+            <li>연구소 확장이전, 연구 인프라 고도화</li>
+            <li>개량신약 2종 글로벌 최초 임상 3상 허가
+              <ul class="list-disc list-inside ml-4">
+                <li>듀글로우정 (제일약품)</li>
+                <li>다파리나정 (아주약품)</li>
+              </ul>
+            </li>
+            <li>개량신약 2품목 임상 1상·3상 진행 중</li>
+            <li>말레이시아 YSP사 등 해외 기술이전 수행</li>
+            <li>의약품 13품목 추가 허가</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2026~2030 -->
+      <div class="flex gap-4">
+        <div class="w-28 shrink-0 text-primary font-semibold">2026~2030<br><span class="text-xs text-slate-500">(계획)</span></div>
+        <div class="flex-1 bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
+          <ul class="list-disc list-inside text-slate-700 space-y-1">
+            <li>개량신약 10건 허가 목표</li>
+            <li>글로벌 기술이전 2건 추진</li>
+            <li>약물 가용화 플랫폼 구축</li>
+            <li>의약품 20품목 허가 목표</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 py-4 text-center text-xs text-slate-500 bg-white mt-8">
+    © 2025 JP BIO Co., Ltd. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

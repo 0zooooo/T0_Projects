@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제이피바이오(주) | News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#004080',
+            primaryLight: '#4f8fdc'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center text-xs font-bold">
+          JP
+        </div>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold">제이피바이오(주)</p>
+          <p class="text-[11px] text-slate-500">JPBIO Corp.</p>
+        </div>
+      </a>
+      <nav class="flex items-center gap-4 text-xs sm:text-sm font-medium">
+        <a href="company-overview.html" class="hover:text-primary">회사소개</a>
+        <a href="rnd-overview.html" class="hover:text-primary">연구개요</a>
+        <a href="rnd-pipeline.html" class="hover:text-primary">파이프라인</a>
+        <a href="news-list.html" class="text-primary">News</a>
+        <a href="news-notice.html" class="hover:text-primary">공지사항</a>
+        <a href="careers-openings.html" class="hidden sm:inline hover:text-primary">채용공고</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-slate-900 to-primary py-14">
+    <div class="max-w-5xl mx-auto px-4 text-white">
+      <p class="text-[11px] uppercase tracking-[0.24em] text-blue-200 mb-2">
+        News &amp; Media
+      </p>
+      <h1 class="text-2xl sm:text-3xl font-bold mb-3">News</h1>
+      <p class="text-sm sm:text-base text-blue-100 max-w-2xl leading-relaxed">
+        제이피바이오의 보도자료, 언론 기사, 연구 및 기술이전 소식을
+        카드뉴스 형식으로 한눈에 모았습니다.
+        추후 뉴스 API나 외부 보도자료 링크와 연동이 가능하도록 설계되어 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 본문 -->
+  <main class="max-w-5xl mx-auto px-4 py-10 space-y-8">
+
+    <!-- 필터 영역 -->
+    <section class="flex flex-wrap items-center justify-between gap-3">
+      <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
+        <button class="px-3 py-1.5 rounded-full bg-primary text-white font-medium">
+          전체
+        </button>
+        <button class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-primary hover:text-primary">
+          보도자료
+        </button>
+        <button class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-primary hover:text-primary">
+          언론기사
+        </button>
+        <button class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-primary hover:text-primary">
+          연구·학회
+        </button>
+      </div>
+
+      <!-- 검색창(나중에 API 연동할 때 사용) -->
+      <div class="w-full sm:w-56">
+        <label class="relative block text-xs">
+          <input
+            type="text"
+            placeholder="제목·키워드 검색"
+            class="w-full rounded-full border border-slate-200 bg-white px-3 py-2 pr-8 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+          />
+          <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- 카드뉴스 리스트 -->
+    <section class="grid md:grid-cols-2 gap-5 lg:grid-cols-3">
+      <!-- 카드 1 -->
+      <article class="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+        <div class="h-28 bg-slate-100 rounded-t-2xl flex items-center justify-center text-[11px] text-slate-500">
+          대표 이미지(보도자료 썸네일)
+        </div>
+        <div class="flex-1 p-4 flex flex-col gap-2 text-sm">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex px-2 py-0.5 rounded-full bg-blue-50 text-[11px] text-blue-700 font-medium">
+              보도자료
+            </span>
+            <span class="text-[11px] text-slate-400">2025-11-30</span>
+          </div>
+          <h2 class="font-semibold text-slate-900 line-clamp-2">
+            제이피바이오, 개량신약 글로벌 임상 3상 결과 발표
+          </h2>
+          <p class="text-[12px] text-slate-600 line-clamp-3">
+            SGLT2 억제제 기반 개량신약의 글로벌 임상 3상에서 유의한 혈당 조절 효과와
+            안전성을 입증하며 향후 시장 확대에 대한 기대를 높였습니다.
+          </p>
+          <div class="mt-auto pt-2 flex items-center justify-between">
+            <span class="text-[11px] text-slate-500">출처: 제이피바이오 보도자료</span>
+            <a href="#" class="text-[11px] text-primary hover:underline">자세히 보기 →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 카드 2 -->
+      <article class="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+        <div class="h-28 bg-slate-100 rounded-t-2xl flex items-center justify-center text-[11px] text-slate-500">
+          기사 이미지(언론사 썸네일)
+        </div>
+        <div class="flex-1 p-4 flex flex-col gap-2 text-sm">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex px-2 py-0.5 rounded-full bg-emerald-50 text-[11px] text-emerald-700 font-medium">
+              언론기사
+            </span>
+            <span class="text-[11px] text-slate-400">2025-10-18</span>
+          </div>
+          <h2 class="font-semibold text-slate-900 line-clamp-2">
+            “개량신약·DDS 전문 R&amp;D 파트너” 제이피바이오 성장 스토리
+          </h2>
+          <p class="text-[12px] text-slate-600 line-clamp-3">
+            국내외 제약사와의 다양한 기술이전 경험과 타겟용출 기반 개발 전략을 바탕으로
+            제제기술 특화 R&amp;D 기업으로 자리매김하고 있다는 분석이 나왔습니다.
+          </p>
+          <div class="mt-auto pt-2 flex items-center justify-between">
+            <span class="text-[11px] text-slate-500">출처: ○○경제신문</span>
+            <a href="#" class="text-[11px] text-primary hover:underline">기사 링크 →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 카드 3 -->
+      <article class="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+        <div class="h-28 bg-slate-100 rounded-t-2xl flex items-center justify-center text-[11px] text-slate-500">
+          학회/포스터 이미지
+        </div>
+        <div class="flex-1 p-4 flex flex-col gap-2 text-sm">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex px-2 py-0.5 rounded-full bg-indigo-50 text-[11px] text-indigo-700 font-medium">
+              연구·학회
+            </span>
+            <span class="text-[11px] text-slate-400">2025-09-05</span>
+          </div>
+          <h2 class="font-semibold text-slate-900 line-clamp-2">
+            국제 제제기술 학회에서 타겟용출(IVIVC) 기반 개량신약 연구 결과 발표
+          </h2>
+          <p class="text-[12px] text-slate-600 line-clamp-3">
+            서방형 제제와 가용화 기술을 결합한 새 플랫폼에 대한 임상 및 비임상 데이터를 공유하며
+            국내외 연구자들의 관심을 받았습니다.
+          </p>
+          <div class="mt-auto pt-2 flex items-center justify-between">
+            <span class="text-[11px] text-slate-500">출처: 학회 발표자료</span>
+            <a href="#" class="text-[11px] text-primary hover:underline">발표 자료 보기 →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 필요하면 카드 더 복붙해서 추가 -->
+    </section>
+
+    <!-- 페이지네이션 (형식만) -->
+    <section class="flex items-center justify-center gap-2 text-xs mt-4">
+      <button class="px-2 py-1 rounded border border-slate-200 text-slate-600 hover:bg-white">
+        ◀ 이전
+      </button>
+      <span class="px-2 py-1 rounded bg-primary text-white">1</span>
+      <button class="px-2 py-1 rounded border border-slate-200 text-slate-600 hover:bg-white">
+        2
+      </button>
+      <button class="px-2 py-1 rounded border border-slate-200 text-slate-600 hover:bg-white">
+        다음 ▶
+      </button>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 py-4 text-center text-xs text-slate-500 bg-white">
+    © 2025 JP BIO Co., Ltd. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

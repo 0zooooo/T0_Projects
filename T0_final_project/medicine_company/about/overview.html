@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이피바이오(주) | 회사개요</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red-main: #e53935;
+            --blue-main: #1e88e5;
+            --green-main: #2a9a4a;
+            --text-main: #2f333a;
+            --text-sub: #5a6070;
+            --soft-border: #dde3ec;
+            --bg-main: linear-gradient(135deg, #f6f8fc 0%, #edf3fb 60%, #f9fbff 100%);
+            --card: #ffffff;
+            --header-height: 74px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* HEADER (index와 동일, 링크만 페이지용으로 수정) */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 36px;
+            padding: 20px 12vw;
+            background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.9));
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--soft-border);
+        }
+
+        .logo-area {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .logo-mark {
+            width: 46px;
+            height: 46px;
+            background: url('img/logo.png') center/contain no-repeat;
+            display: inline-block;
+        }
+
+        .logo-text {
+            display: flex;
+            gap: 4px;
+            font-size: 22px;
+            letter-spacing: 0.6px;
+        }
+        .logo-red { color: var(--red-main); }
+        .logo-blue { color: var(--blue-main); }
+        .logo-green { color: var(--green-main); }
+
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 36px;
+            flex: 1;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-item { position: relative; }
+
+        .nav-link {
+            position: relative;
+            font-size: 17px;
+            padding: 10px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            border-radius: 6px;
+            background: linear-gradient(90deg, var(--red-main), var(--blue-main));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.2s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link:focus-visible::after { transform: scaleX(1); }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            min-width: 150px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid var(--soft-border);
+            box-shadow: 0 12px 18px rgba(0,0,0,0.06);
+            z-index: 99;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 8px 10px;
+            font-size: 14px;
+            color: var(--text-main);
+            border-radius: 8px;
+        }
+
+        .submenu a:hover,
+        .submenu a:focus-visible {
+            background: #f3f6fb;
+            color: var(--blue-main);
+        }
+
+        .nav-item:hover .submenu,
+        .nav-item:focus-within .submenu { display: block; }
+
+        .header-actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            width: 24px;
+            height: 3px;
+            background: var(--text-main);
+            border-radius: 8px;
+        }
+
+        /* PAGE LAYOUT */
+        .page-hero {
+            padding: 80px 12vw 40px;
+            background: radial-gradient(circle at top left,#e3f2fd,#ffffff);
+        }
+
+        .page-hero h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+
+        .page-hero p {
+            margin: 0;
+            color: var(--text-sub);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .page-inner {
+            padding: 10px 12vw 70px;
+        }
+
+        .layout-2col {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 30px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin: 0 0 12px;
+            font-weight: 700;
+            color: var(--green-main);
+        }
+
+        .section-text {
+            margin: 0 0 18px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-sub);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2,minmax(0,1fr));
+            gap: 14px;
+            margin-top: 6px;
+        }
+
+        .info-card {
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: #fff;
+            border: 1px solid #e3e8f0;
+            box-shadow: 0 10px 26px rgba(15,39,80,0.06);
+            font-size: 14px;
+        }
+
+        .info-card strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--blue-main);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #e3f2fd;
+            color: var(--blue-main);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            margin-bottom: 10px;
+        }
+
+        .snapshot-grid {
+            display: grid;
+            grid-template-columns: repeat(3,minmax(0,1fr));
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .snapshot-item {
+            padding: 16px 14px;
+            text-align: center;
+            border-radius: 14px;
+            background: #ffffff;
+            border: 1px solid #e3e7f0;
+        }
+
+        .snapshot-item .value {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--blue-main);
+            margin-bottom: 4px;
+        }
+
+        .snapshot-item .label {
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        .side-panel {
+            padding: 18px 16px;
+            border-radius: 18px;
+            background: #ffffff;
+            border: 1px solid #e2e7f2;
+            box-shadow: 0 16px 34px rgba(16,37,77,0.08);
+        }
+
+        .side-panel h3 {
+            margin: 0 0 8px;
+            font-size: 16px;
+            color: var(--blue-main);
+        }
+
+        .side-panel dl {
+            margin: 8px 0 0;
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        .side-panel dt {
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        .side-panel dd {
+            margin: 0 0 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            background: #eef3fa;
+            color: var(--text-sub);
+            font-size: 13px;
+            border-top: 1px solid var(--soft-border);
+        }
+
+        @media (max-width: 900px) {
+            nav { display:none; }
+            .nav-toggle { display:flex; }
+            header { padding-inline:6vw; }
+            .page-hero { padding-inline:6vw; }
+            .page-inner { padding-inline:6vw; }
+            .layout-2col { grid-template-columns: 1fr; }
+            .snapshot-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+        }
+
+        @media (max-width: 600px) {
+            .snapshot-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a class="logo-area" href="index.html">
+            <div class="logo-mark" aria-hidden="true"></div>
+            <div class="logo-text">
+                <span class="logo-red">제이</span>
+                <span class="logo-blue">피</span>
+                <span class="logo-green">바이오(주)</span>
+            </div>
+        </a>
+
+        <nav>
+            <div class="nav-item">
+                <a class="nav-link" href="company-overview.html">회사소개</a>
+                <div class="submenu">
+                    <a href="company-overview.html">회사개요</a>
+                    <a href="company-history.html">회사연혁</a>
+                    <a href="company-philosophy.html">경영이념</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="#!">연구&개발</a>
+                <div class="submenu">
+                    <a href="rnd-overview.html">연구개요</a>
+                    <a href="rnd-pipeline.html">파이프라인</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="#!">소식</a>
+                <div class="submenu">
+                    <a href="news-list.html">News</a>
+                    <a href="news-notice.html">공지사항</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="#!">채용</a>
+                <div class="submenu">
+                    <a href="careers-benefits.html">복리후생</a>
+                    <a href="careers-openings.html">채용공고</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <div class="header-actions">
+            <div class="nav-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <span class="badge">Company Overview</span>
+        <h1>회사개요</h1>
+        <p>
+            제이피바이오㈜는 DDS 기반 제제기술과 서방화·가용화·안정화 기술을 바탕으로<br>
+            개량신약 및 제네릭 개발을 수행하는 의학·약학 연구개발 전문 기업입니다.
+        </p>
+    </section>
+
+    <!-- PAGE BODY -->
+    <main class="page-inner">
+        <div class="layout-2col">
+            <!-- 왼쪽: 회사 소개 본문 -->
+            <div>
+                <h2 class="section-title">JPBIO 한눈에 보기</h2>
+                <p class="section-text">
+                    제이피바이오는 2015년 12월 28일 설립된 연구개발 중심 제약사로,
+                    경기도 성남시 중원구 사기막골로에 본사와 연구시설을 두고 있습니다.
+                    연구 인력 19명을 포함한 총 25명의 구성원이
+                    제제연구·분석연구·개발 및 관리 전반을 담당하고 있습니다.:contentReference[oaicite:1]{index=1}
+                </p>
+                <p class="section-text">
+                    핵심 기술은 서방화(controlled-release) 기술, 저용해성 API의 흡수 한계를 개선하는
+                    가용화(solubility-up) 기술, 의약품의 물리·화학적 안정성을 확보하는 안정화(stability) 기술이며,
+                    이를 기반으로 Drug Delivery System(DDS) 분야에서 차별화된 경쟁력을 보유하고 있습니다.:contentReference[oaicite:2]{index=2}
+                </p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <strong>기본 정보</strong>
+                        업종: 의학 및 약학 연구개발업<br>
+                        설립일자: 2015년 12월 28일<br>
+                        소재지: 경기도 성남시 중원구 사기막골로 159<br>
+                        자본금: 7.11억 원
+                    </div>
+                    <div class="info-card">
+                        <strong>경영 실적(최근)</strong>
+                        2023년 매출액 54억 / 순이익 15억<br>
+                        2024년 매출액 52억 / 순이익 16억<br>
+                        안정적인 수익 구조를 유지하며 R&amp;D에 재투자하고 있습니다.:contentReference[oaicite:3]{index=3}
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="margin-top:30px;">사업 모델</h2>
+                <p class="section-text">
+                    제이피바이오는 다음 네 가지 축을 중심으로 사업을 전개합니다.:contentReference[oaicite:4]{index=4}
+                </p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <strong>제제개발 기술이전</strong>
+                        의약품 제제개발 결과를 파트너사에 기술이전하여 연구용역수익과
+                        기술료를 창출합니다.
+                    </div>
+                    <div class="info-card">
+                        <strong>OEM & 수탁생산 제휴</strong>
+                        의약품 수탁생산 전문업체와의 제휴를 통해
+                        개발 품목의 상업 생산을 지원합니다.
+                    </div>
+                    <div class="info-card">
+                        <strong>해외 기술수출 및 라이센싱</strong>
+                        해외 제약사와의 협업을 통해 개량신약 및 제제기술을
+                        해외 시장에 이전하고 있습니다.
+                    </div>
+                    <div class="info-card">
+                        <strong>개량신약 자체 품목 및 판매</strong>
+                        개량신약 임상·허가를 통해 자체 품목을 확보하고,
+                        파트너사와 함께 국내 유통 및 판매를 추진합니다.
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="margin-top:32px;">협력 네트워크</h2>
+                <p class="section-text">
+                    녹십자, 제일약품, 보령제약, 아주약품, 한림제약 등
+                    국내 30여 개 제약사와 기술이전 및 위수탁 사업을 수행하고 있으며,
+                    해외 파트너사와의 협업을 통해 글로벌 시장으로 영역을 확장하고 있습니다.
+                </p>
+            </div>
+
+            <!-- 오른쪽: 스냅샷 / 핵심 지표 -->
+            <aside class="side-panel">
+                <h3>Company Snapshot</h3>
+                <dl>
+                    <dt>회사명</dt>
+                    <dd>제이피바이오㈜ (JPBIO Corp.)</dd>
+
+                    <dt>업종</dt>
+                    <dd>의학 및 약학 연구개발업</dd>
+
+                    <dt>소재지</dt>
+                    <dd>경기도 성남시 중원구 사기막골로 159<br>(금강하이테크 II 701호)</dd>
+
+                    <dt>임직원 수</dt>
+                    <dd>25명 (연구 19명 / 개발·관리 6명)</dd>
+
+                    <dt>핵심 기술</dt>
+                    <dd>서방화, 가용화, 안정화, DDS 제제기술</dd>
+                </dl>
+
+                <div class="snapshot-grid">
+                    <div class="snapshot-item">
+                        <div class="value">2015</div>
+                        <div class="label">설립연도</div>
+                    </div>
+                    <div class="snapshot-item">
+                        <div class="value">19명</div>
+                        <div class="label">연구인력</div>
+                    </div>
+                    <div class="snapshot-item">
+                        <div class="value">30+</div>
+                        <div class="label">국내 제약 파트너사</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 JP BIO Co., Ltd. All Rights Reserved.
+    </footer>
+</body>
+</html>

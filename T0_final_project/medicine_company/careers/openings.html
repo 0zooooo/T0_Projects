@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제이피바이오(주) | 채용공고</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#004080',
+            primaryLight: '#4f8fdc'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center text-xs font-bold">
+          JP
+        </div>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold">제이피바이오(주)</p>
+          <p class="text-[11px] text-slate-500">JPBIO Corp.</p>
+        </div>
+      </a>
+      <nav class="flex items-center gap-4 text-xs sm:text-sm font-medium">
+        <a href="company-overview.html" class="hover:text-primary">회사개요</a>
+        <a href="rnd-overview.html" class="hover:text-primary">연구개요</a>
+        <a href="rnd-pipeline.html" class="hover:text-primary">파이프라인</a>
+        <a href="news-list.html" class="hover:text-primary">News</a>
+        <a href="news-notice.html" class="hover:text-primary">공지사항</a>
+        <a href="careers-benefits.html" class="hover:text-primary">복리후생</a>
+        <a href="careers-openings.html" class="text-primary">채용공고</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-slate-900 to-primary py-14">
+    <div class="max-w-5xl mx-auto px-4 text-white">
+      <p class="text-[11px] uppercase tracking-[0.24em] text-blue-200 mb-2">
+        Careers
+      </p>
+      <h1 class="text-2xl sm:text-3xl font-bold mb-3">채용공고</h1>
+      <p class="text-sm sm:text-base text-blue-100 max-w-2xl leading-relaxed">
+        제이피바이오와 함께 성장할 인재를 찾고 있습니다.
+        아래 채용공고는 예시 데이터이며, 실제 운영 시 공지사항 게시판과 동일하게
+        Django + DB로 연동하여 관리할 수 있도록 테이블 구조로 구성했습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 본문 -->
+  <main class="max-w-5xl mx-auto px-4 py-10 space-y-6">
+
+    <!-- 상단 안내 -->
+    <section class="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+      <span class="text-slate-600">
+        현재 <span class="font-semibold">2</span>건의 채용공고가 진행 중입니다. (예시)
+      </span>
+      <a href="careers-benefits.html"
+         class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-primary hover:text-primary">
+        복리후생 보기
+      </a>
+    </section>
+
+    <!-- 채용공고 테이블 -->
+    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-xs sm:text-sm border-collapse">
+          <thead class="bg-slate-100 text-slate-700">
+            <tr>
+              <th class="px-3 py-2 w-12 text-center">번호</th>
+              <th class="px-3 py-2 text-left">공고명</th>
+              <th class="px-3 py-2 w-24 text-center">직무</th>
+              <th class="px-3 py-2 w-24 text-center">고용형태</th>
+              <th class="px-3 py-2 w-24 text-center">근무지</th>
+              <th class="px-3 py-2 w-24 text-center">마감일</th>
+              <th class="px-3 py-2 w-20 text-center">상태</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-800">
+
+            <!-- 공고 1 -->
+            <tr class="hover:bg-slate-50">
+              <td class="px-3 py-2 text-center">2</td>
+              <td class="px-3 py-2">
+                <a href="#" class="hover:text-primary hover:underline">
+                  [경력/신입] 제제연구팀 연구원 모집
+                </a>
+              </td>
+              <td class="px-3 py-2 text-center">제제연구</td>
+              <td class="px-3 py-2 text-center">정규직</td>
+              <td class="px-3 py-2 text-center">성남</td>
+              <td class="px-3 py-2 text-center">2025-12-31</td>
+              <td class="px-3 py-2 text-center">
+                <span class="inline-flex px-2 py-0.5 rounded-full bg-emerald-50 text-[11px] text-emerald-700">
+                  진행중
+                </span>
+              </td>
+            </tr>
+
+            <!-- 공고 2 -->
+            <tr class="hover:bg-slate-50">
+              <td class="px-3 py-2 text-center">1</td>
+              <td class="px-3 py-2">
+                <a href="#" class="hover:text-primary hover:underline">
+                  [경력] 분석연구팀 연구원 모집
+                </a>
+              </td>
+              <td class="px-3 py-2 text-center">분석연구</td>
+              <td class="px-3 py-2 text-center">정규직</td>
+              <td class="px-3 py-2 text-center">성남</td>
+              <td class="px-3 py-2 text-center">2025-11-30</td>
+              <td class="px-3 py-2 text-center">
+                <span class="inline-flex px-2 py-0.5 rounded-full bg-amber-50 text-[11px] text-amber-700">
+                  서류접수중
+                </span>
+              </td>
+            </tr>
+
+            <!-- 예시: 마감된 공고 -->
+            <tr class="hover:bg-slate-50">
+              <td class="px-3 py-2 text-center">0</td>
+              <td class="px-3 py-2">
+                <a href="#" class="hover:text-primary hover:underline">
+                  [마감] RA(허가) 담당자 모집
+                </a>
+              </td>
+              <td class="px-3 py-2 text-center">RA</td>
+              <td class="px-3 py-2 text-center">정규직</td>
+              <td class="px-3 py-2 text-center">성남</td>
+              <td class="px-3 py-2 text-center">2025-09-15</td>
+              <td class="px-3 py-2 text-center">
+                <span class="inline-flex px-2 py-0.5 rounded-full bg-slate-100 text-[11px] text-slate-500">
+                  마감
+                </span>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 백엔드 연동 메모 (공지사항과 이하동문) -->
+    <section class="bg-slate-100 rounded-2xl border border-slate-200 p-4 text-[11px] sm:text-xs text-slate-600">
+      <p class="font-semibold mb-1">※ 구현 메모 (공지사항 게시판과 동일 구조)</p>
+      <ul class="list-disc list-inside space-y-1">
+        <li>공지사항 게시판과 마찬가지로 <strong>Django + DB</strong>로 공고 모델을 만들고 리스트를 렌더링</li>
+        <li>상세 페이지 URL 예: <code>/careers/openings/&lt;id&gt;/</code></li>
+        <li>상태 필드(진행중/서류접수중/마감)를 enum 또는 choice 필드로 관리하면 필터 구현이 쉬움</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 py-4 text-center text-xs text-slate-500 bg-white">
+    © 2025 JP BIO Co., Ltd. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

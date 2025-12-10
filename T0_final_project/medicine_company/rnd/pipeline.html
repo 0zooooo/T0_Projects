@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제이피바이오(주) | 파이프라인</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#004080',
+            primaryLight: '#4f8fdc'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center text-xs font-bold">
+          JP
+        </div>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold">제이피바이오(주)</p>
+          <p class="text-[11px] text-slate-500">JPBIO Corp.</p>
+        </div>
+      </a>
+      <nav class="flex items-center gap-4 text-xs sm:text-sm font-medium">
+        <a href="company-overview.html" class="hover:text-primary">회사개요</a>
+        <a href="company-history.html" class="hover:text-primary">회사연혁</a>
+        <a href="company-philosophy.html" class="hover:text-primary">경영이념</a>
+        <a href="rnd-overview.html" class="hover:text-primary">연구개요</a>
+        <a href="rnd-pipeline.html" class="text-primary">파이프라인</a>
+        <a href="index.html" class="hidden sm:inline hover:text-primary">메인으로</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-slate-900 to-primary py-14">
+    <div class="max-w-5xl mx-auto px-4 text-white">
+      <p class="text-[11px] uppercase tracking-[0.24em] text-blue-200 mb-2">
+        R&amp;D Pipeline
+      </p>
+      <h1 class="text-2xl sm:text-3xl font-bold mb-3">파이프라인</h1>
+      <p class="text-sm sm:text-base text-blue-100 max-w-2xl leading-relaxed">
+        당뇨, 심혈관, 고지혈증, 위장관 질환 등 만성질환 중심의 개량신약과
+        다양한 적응증의 제네릭 파이프라인을 보유하고 있으며,
+        허가·임상·제제연구 단계별 과제를 균형 있게 운영하고 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 본문 -->
+  <main class="max-w-5xl mx-auto px-4 py-10 space-y-10">
+
+    <!-- 파이프라인 개요 -->
+    <section>
+      <h2 class="text-xl font-semibold mb-3 text-primary">파이프라인 개요</h2>
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm text-sm text-slate-700 space-y-1">
+        <p>· 총 30건 기술이전, 19품목 허가, 145개 상품 유통 중</p>
+        <p>· 개량신약 2종 허가(글로벌 최초 임상 3상) 및 개량신약 2종 임상 진행 중</p>
+        <p>· 당뇨·혈관질환·고지혈증 등 만성질환 분야 중심으로 파이프라인 다각화</p>
+        <p>· 희귀질환, 항응고제 등으로 개발 영역 확장 중</p>
+      </div>
+    </section>
+
+    <!-- 주요 허가 품목 파이프라인 (요약 테이블) -->
+    <section>
+      <h2 class="text-xl font-semibold mb-3 text-primary">주요 허가 및 개발 파이프라인</h2>
+      <div class="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
+        <table class="min-w-full text-xs sm:text-sm border-collapse">
+          <thead class="bg-slate-100 text-slate-700">
+            <tr>
+              <th class="px-3 py-2 text-left">적응증</th>
+              <th class="px-3 py-2 text-left">원료명 / 제제</th>
+              <th class="px-3 py-2 text-left">기술 특징</th>
+              <th class="px-3 py-2 text-left">개발현황</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr>
+              <td class="px-3 py-2 align-top">당뇨</td>
+              <td class="px-3 py-2 align-top">Dapagliflozin</td>
+              <td class="px-3 py-2 align-top">SGLT2 억제제 개량 제제, 용량·복약 편의성 개선</td>
+              <td class="px-3 py-2 align-top">허가 완료, 100억 매출 예상</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">당뇨</td>
+              <td class="px-3 py-2 align-top">Dapagliflozin / Metformin XR</td>
+              <td class="px-3 py-2 align-top">서방정 복합제, 1일 1회 복용을 위한 방출제어 기술 적용</td>
+              <td class="px-3 py-2 align-top">허가 완료, 100억 매출 예상</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">당뇨</td>
+              <td class="px-3 py-2 align-top">Dapagliflozin / Pioglitazone</td>
+              <td class="px-3 py-2 align-top">국내 최초 복합 신약, 글로벌 최초 임상 3상 진행</td>
+              <td class="px-3 py-2 align-top">허가 및 판매 중, 추가 임상 데이터 축적</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">당뇨</td>
+              <td class="px-3 py-2 align-top">Dapagliflozin / Linagliptin</td>
+              <td class="px-3 py-2 align-top">국내 최초 복합 신약, 특허 보유</td>
+              <td class="px-3 py-2 align-top">허가 완료, 글로벌 임상 및 수출 검토</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">혈관질환</td>
+              <td class="px-3 py-2 align-top">Cilostazol / 은행엽엑스</td>
+              <td class="px-3 py-2 align-top">만성동맥폐색증·뇌경색 적응증, 복합제 제형</td>
+              <td class="px-3 py-2 align-top">허가 및 판매 중</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">혈관질환</td>
+              <td class="px-3 py-2 align-top">Sarpogrelate CR</td>
+              <td class="px-3 py-2 align-top">속서방 방출제제, 100억 이상 매출, 특허 회피 제형</td>
+              <td class="px-3 py-2 align-top">허가 완료, 시장 확대 진행 중</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">고지혈증</td>
+              <td class="px-3 py-2 align-top">Rosuvastatin / Ezetimibe</td>
+              <td class="px-3 py-2 align-top">단층정 제제기술 도입, 100억 이상 매출</td>
+              <td class="px-3 py-2 align-top">허가 및 판매 중</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-2 text-[11px] text-slate-500">
+        ※ 상기 정보는 소개자료 기준 주요 품목을 요약한 것으로, 실제 파이프라인은 시점에 따라 변경될 수 있습니다.
+      </p>
+    </section>
+
+    <!-- R&D 파이프라인 (연구단계 과제) -->
+    <section>
+      <h2 class="text-xl font-semibold mb-3 text-primary">R&amp;D 파이프라인 (연구 단계)</h2>
+      <p class="text-sm text-slate-700 mb-4">
+        현재 제제연구 단계에서는 위장관·고지혈·희귀질환 등 다양한 적응증에 대해
+        개량신약 및 기술이전용 제네릭 과제를 진행하고 있습니다.:contentReference[oaicite:7]{index=7}
+      </p>
+
+      <div class="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
+        <table class="min-w-full text-xs sm:text-sm border-collapse">
+          <thead class="bg-slate-100 text-slate-700">
+            <tr>
+              <th class="px-3 py-2 text-left">적응증</th>
+              <th class="px-3 py-2 text-left">원료명</th>
+              <th class="px-3 py-2 text-left">기술 특징</th>
+              <th class="px-3 py-2 text-left">개발단계</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr>
+              <td class="px-3 py-2 align-top">위염</td>
+              <td class="px-3 py-2 align-top">Esomeprazole</td>
+              <td class="px-3 py-2 align-top">식후 흡수 개선 기술 적용</td>
+              <td class="px-3 py-2 align-top">제제연구</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">고지혈증</td>
+              <td class="px-3 py-2 align-top">Ezetimibe / Fenofibrate / Pitavastatin</td>
+              <td class="px-3 py-2 align-top">다성분 복합제 제형 설계</td>
+              <td class="px-3 py-2 align-top">제제연구</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">고인산혈증</td>
+              <td class="px-3 py-2 align-top">Sevelamer, Ferric citrate hydrate</td>
+              <td class="px-3 py-2 align-top">장내 인 결합을 위한 제형 최적화</td>
+              <td class="px-3 py-2 align-top">제제연구</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">진통제</td>
+              <td class="px-3 py-2 align-top">Pelubiprofen</td>
+              <td class="px-3 py-2 align-top">용량 감소 개량신약</td>
+              <td class="px-3 py-2 align-top">제제연구</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">고혈압</td>
+              <td class="px-3 py-2 align-top">Telmisartan, Valsartan</td>
+              <td class="px-3 py-2 align-top">용량 감소 개량신약 / 기술이전 가능</td>
+              <td class="px-3 py-2 align-top">제제연구 / 기술이전 검토</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 align-top">희귀질환</td>
+              <td class="px-3 py-2 align-top">Phenylbutyric acid</td>
+              <td class="px-3 py-2 align-top">희귀의약품, 기술이전 가능</td>
+              <td class="px-3 py-2 align-top">제제연구</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 py-4 text-center text-xs text-slate-500 bg-white">
+    © 2025 JP BIO Co., Ltd. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

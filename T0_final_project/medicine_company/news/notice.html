@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제이피바이오(주) | 공지사항</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#004080',
+            primaryLight: '#4f8fdc'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center text-xs font-bold">
+          JP
+        </div>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold">제이피바이오(주)</p>
+          <p class="text-[11px] text-slate-500">JPBIO Corp.</p>
+        </div>
+      </a>
+      <nav class="flex items-center gap-4 text-xs sm:text-sm font-medium">
+        <a href="company-overview.html" class="hover:text-primary">회사개요</a>
+        <a href="rnd-overview.html" class="hover:text-primary">연구개요</a>
+        <a href="rnd-pipeline.html" class="hover:text-primary">파이프라인</a>
+        <a href="news-list.html" class="hover:text-primary">News</a>
+        <a href="news-notice.html" class="text-primary">공지사항</a>
+        <a href="careers-openings.html" class="hidden sm:inline hover:text-primary">채용공고</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-slate-900 to-primary py-14">
+    <div class="max-w-5xl mx-auto px-4 text-white">
+      <p class="text-[11px] uppercase tracking-[0.24em] text-blue-200 mb-2">
+        Notice
+      </p>
+      <h1 class="text-2xl sm:text-3xl font-bold mb-3">공지사항</h1>
+      <p class="text-sm sm:text-base text-blue-100 max-w-2xl leading-relaxed">
+        제이피바이오의 공지사항, 채용공고 안내, 시스템 점검 및 주요 안내 사항을
+        한 곳에서 확인하실 수 있는 게시판입니다.
+        추후 Django + DB를 연동하여 실제 게시판 기능을 구현할 수 있도록 테이블 기반으로 구성했습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 본문 -->
+  <main class="max-w-5xl mx-auto px-4 py-10 space-y-6">
+
+    <!-- 상단 액션: 채용공고 바로가기 -->
+    <section class="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+      <span class="text-slate-600">
+        총 <span class="font-semibold">3</span>건의 공지사항이 있습니다. (예시 데이터)
+      </span>
+      <a href="careers-openings.html"
+         class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary text-white hover:bg-primary/90">
+        채용공고 바로가기
+      </a>
+    </section>
+
+    <!-- 공지사항 테이블 -->
+    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-xs sm:text-sm border-collapse">
+          <thead class="bg-slate-100 text-slate-700">
+            <tr>
+              <th class="px-3 py-2 w-12 text-center">번호</th>
+              <th class="px-3 py-2 text-left">제목</th>
+              <th class="px-3 py-2 w-24 text-center">구분</th>
+              <th class="px-3 py-2 w-24 text-center">게시일</th>
+              <th class="px-3 py-2 w-16 text-center">상태</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-800">
+
+            <tr class="hover:bg-slate-50">
+              <td class="px-3 py-2 text-center">3</td>
+              <td class="px-3 py-2">
+                <a href="#" class="hover:text-primary hover:underline">
+                  [채용] 제제연구팀 경력/신입 연구원 모집 안내
+                </a>
+              </td>
+              <td class="px-3 py-2 text-center">
+                <span class="inline-flex px-2 py-0.5 rounded-full bg-emerald-50 text-[11px] text-emerald-700">
+                  채용
+                </span>
+              </td>
+              <td class="px-3 py-2 text-center">2025-12-01</td>
+              <td class="px-3 py-2 text-center">
+                <span class="text-[11px] text-emerald-700 font-semibold">진행중</span>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-slate-50">
+              <td class="px-3 py-2 text-center">2</td>
+              <td class="px-3 py-2">
+                <a href="#" class="hover:text-primary hover:underline">
+                  서버 점검 안내 (R&amp;D 데이터베이스 정기 점검)
+                </a>
+              </td>
+              <td class="px-3 py-2 text-center">
+                <span class="inline-flex px-2 py-0.5 rounded-full bg-slate-100 text-[11px] text-slate-700">
+                  공지
+                </span>
+              </td>
+              <td class="px-3 py-2 text-center">2025-11-15</td>
+              <td class="px-3 py-2 text-center">
+                <span class="text-[11px] text-slate-500">완료</span>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-slate-50">
+              <td class="px-3 py-2 text-center">1</td>
+              <td class="px-3 py-2">
+                <a href="#" class="hover:text-primary hover:underline">
+                  제이피바이오 홈페이지 리뉴얼 오픈 안내
+                </a>
+              </td>
+              <td class="px-3 py-2 text-center">
+                <span class="inline-flex px-2 py-0.5 rounded-full bg-blue-50 text-[11px] text-blue-700">
+                  공지
+                </span>
+              </td>
+              <td class="px-3 py-2 text-center">2025-10-01</td>
+              <td class="px-3 py-2 text-center">
+                <span class="text-[11px] text-slate-500">완료</span>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 아래쪽 설명: 백엔드 연동 메모 -->
+    <section class="bg-slate-100 rounded-2xl border border-slate-200 p-4 text-[11px] sm:text-xs text-slate-600">
+      <p class="font-semibold mb-1">※ 구현 메모 (백엔드 개발 시)</p>
+      <ul class="list-disc list-inside space-y-1">
+        <li>가장 쉬운 방법: <strong>Django + DB</strong>로 공지사항 테이블 모델 생성 후, 이 리스트를 동적으로 렌더링</li>
+        <li>상세 페이지용 URL 구조 예: <code>/notice/&lt;id&gt;/</code> → 공지 상세 내용 표시</li>
+        <li>상태(진행중/완료/마감 등)는 enum 필드로 관리하면 필터링 및 UI 처리에 용이</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 py-4 text-center text-xs text-slate-500 bg-white">
+    © 2025 JP BIO Co., Ltd. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
